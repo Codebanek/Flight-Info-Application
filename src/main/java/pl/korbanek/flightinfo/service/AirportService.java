@@ -15,5 +15,8 @@ public class AirportService {
     public Airport findAirportByIcaoCode(String code){ return airportRepository.findAirportByIcaoCode(code);};
     public List<Airport> findAll(){
         return airportRepository.findAll();
-    }
+    };
+
+
+
 }

@@ -5,14 +5,21 @@
   Time: 13:00
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %><html>
 <head>
     <title>User Details</title>
 </head>
 <body>
 <jsp:include page="fragments/user-header.jsp"></jsp:include>
-
-USER DETAILS HERE ...
+<div style="text-align: center;">
+    </br>
+Username: ${userDetails.username}</br>
+Email: ${userDetails.email}</br>
+First name: ${userDetails.firstName}</br>
+Last name: ${userDetails.lastName}</br>
+Number of plans: ${numberOfPlans}
+</div>
 </body>
 </html>

@@ -15,8 +15,24 @@
 
 <header class="page-header">
     <nav class="navbar navbar-expand-lg justify-content-around">
-        <a href="<c:url value="/welcome"/>" class="navbar-brand main-logo">
+        <a href="<c:url value="/admin"/>" class="navbar-brand main-logo">
             Welcome to <span>Flight-Info</span>
         </a>
+        <ul class="nav nounderline text-uppercase">
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header">
+                    <form action="<c:url value="/logout"/>" method="post">
+                        <input class="fa fa-id-badge" type="submit" value="LOGOUT">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </form>
+                </a>
+            </li>
+            <li class="nav-item ml-4">
+                <a class="nav-link color-header" href="${pageContext.request.contextPath}/admin/allusers">MANAGE USERS</a>
+            </li>
+            <li class="nav-item ml-4">
+                <a class="nav-link" href="${pageContext.request.contextPath}/admin/allplans">MANAGE PLANS</a>
+            </li>
+        </ul>
     </nav>
 </header>

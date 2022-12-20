@@ -18,10 +18,5 @@
         <a href="<c:url value="/welcome"/>" class="navbar-brand main-logo">
             Welcome to <span>Flight-Info</span>
         </a>
-        <ul class="nav nounderline text-uppercase">
-            <li class="nav-item ml-4">
-                <a class="nav-link disabled" href="${pageContext.request.contextPath}/author">o autorze</a>
-            </li>
-        </ul>
     </nav>
 </header>

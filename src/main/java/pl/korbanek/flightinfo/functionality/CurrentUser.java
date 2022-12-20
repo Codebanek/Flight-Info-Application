@@ -1,4 +1,4 @@
-package pl.korbanek.flightinfo;
+package pl.korbanek.flightinfo.functionality;
 
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;

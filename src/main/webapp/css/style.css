@@ -456,3 +456,7 @@ hr {
 .schedules-content-header {
     margin-bottom: 50px;
 }
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -11,7 +11,7 @@
     <title>Author Text</title>
 </head>
 <body>
-<jsp:include page="fragments/author-header.jsp"></jsp:include>
-AUTHOR MESSGE HERE
+<jsp:include page="fragments/user-header.jsp"></jsp:include>
+Hi
 </body>
 </html>

@@ -22,22 +22,22 @@
             <li class="nav-item ml-4">
                 <a class="nav-link color-header">
                 <form action="<c:url value="/logout"/>" method="post">
-                    <input class="fa fa-id-badge" type="submit" value="Wyloguj">
+                    <input class="fa fa-id-badge" type="submit" value="LOGOUT">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </form>
                 </a>
             </li>
             <li class="nav-item ml-4">
-                <a class="nav-link color-header" href="${pageContext.request.contextPath}/user/plans">moje trasy</a>
+                <a class="nav-link color-header" href="${pageContext.request.contextPath}/user/plans">MY PLANS</a>
             </li>
             <li class="nav-item ml-4">
-                <a class="nav-link" href="${pageContext.request.contextPath}/user/flightplan">nowa trasa</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/user/flightplan">NEW PLAN</a>
             </li>
             <li class="nav-item ml-4">
-                <a class="nav-link disabled" href="<c:url value="/user/accountdetails"/>">moje konto</a>
+                <a class="nav-link disabled" href="<c:url value="/user/accountdetails"/>">ACCOUNT DETAILS</a>
             </li>
             <li class="nav-item ml-4">
-                <a class="nav-link disabled" href="${pageContext.request.contextPath}/author">autor</a>
+                <a class="nav-link disabled" href="<c:url value="/user/author"/>">AUTHOR</a>
             </li>
         </ul>
     </nav>

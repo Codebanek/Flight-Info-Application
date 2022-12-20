@@ -14,32 +14,40 @@
 </head>
 <body>
 <jsp:include page="fragments/user-header.jsp"></jsp:include>
+</br>
+<div style="text-align: center;">
+<form:form method="post" modelAttribute="flightDetailsDTO">
 
-<form:form method="post" modelAttribute="flightDetails">
-
-    Podaj typ samolotu:
+    Aircraft type:
     <form:select path="type">
-        <form:option value="0">Wybierz samolot</form:option>
+        <form:option value="0">Choose</form:option>
         <form:options items="${planes}" itemValue="type" itemLabel="type"/>
-    </form:select><br>
-    Podaj prędkość przelotową w węzłąch:
-    <form:input path="speed"/><br>
+    </form:select>
+    <form:errors path="type"/><br><br>
 
-    Lotnisko startu
+
+    Speed - IAS (KTS)
+    <form:input path="speed"/>
+    <form:errors path="speed"/>
+    <br><br>
+
+    Departure
     <form:select path="departure_code">
-    <form:option value="0">Wybierz lotnisko</form:option>
+    <form:option value="0">Choose</form:option>
     <form:options items="${airports}" itemValue="icaoCode" itemLabel="icaoCode"/>
     </form:select>
-<br>
-    Lotnisko lądowania:
+    <form:errors path="departure_code"/>
+    <br><br>
+    Target
     <form:select path="arrival_code">
-        <form:option value="0">Wybierz lotnisko</form:option>
+        <form:option value="0">Choose</form:option>
         <form:options items="${airports}" itemValue="icaoCode" itemLabel="icaoCode"/>
     </form:select>
-    <br>
+    <form:errors path="arrival_code"/>
+    <br><br>
 
-    <label><input type="submit" value="  Lecimy!  "></label>
+    <label><input type="submit" value="  Calculate  "></label>
 </form:form>
-
+</div>
 </body>
 </html>

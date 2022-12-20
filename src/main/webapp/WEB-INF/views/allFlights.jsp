@@ -12,7 +12,7 @@
     <title>User Plans</title>
 </head>
 <body>
-<jsp:include page="fragments/user-header.jsp"></jsp:include>
+<jsp:include page="fragments/admin-header.jsp"></jsp:include>
 
 <table class="table border-bottom schedules-content">
     <thead>
@@ -21,10 +21,11 @@
         <th scope="col" class="col-1">TYPE</th>
         <th scope="col" class="col-1">DEPARTURE</th>
         <th scope="col" class="col-1">DESTINATION</th>
-        <th scope="col" class="col-2">DISTANCE (KM)</th>
-        <th scope="col" class="col-2">SPEED</th>
-        <th scope="col" class="col-2">FLIGHT TIME (MIN)</th>
-        <th scope="col" class="col-2 center">ACTIONS</th>
+        <th scope="col" class="col-1">DISTANCE (KM)</th>
+        <th scope="col" class="col-1">SPEED</th>
+        <th scope="col" class="col-1">FLIGHT TIME (MIN)</th>
+        <th scope="col" class="col-1">CREATED BY</th>
+        <th scope="col" class="col-1 center">ACTIONS</th>
     </tr>
     </thead>
     <tbody class="text-color-lighter">
@@ -34,14 +35,14 @@
             <td class="col-1">${flight.type}</td>
             <td class="col-1">${flight.departure_code}</td>
             <td class="col-1">${flight.arrival_code}</td>
-            <td class="col-2">${flight.distance}</td>
-            <td class="col-2">${flight.speed}</td>
-            <td class="col-2">${flight.flight_time}</td>
-            <td class="col-2 d-flex align-items-center justify-content-center flex-wrap">
+            <td class="col-1">${flight.distance}</td>
+            <td class="col-1">${flight.speed}</td>
+            <td class="col-1">${flight.flight_time}</td>
+            <td class="col-1">${flight.user.username}</td>
+            <td class="col-1 center d-flex align-items-center justify-content-center flex-wrap">
                 <label onclick="return confirm('Are you sure you want to remove this?')">
-                    <a href="<c:url value="/user/removeflight/${flight.id}"/>" class="btn btn-danger rounded-0 text-light m-1">REMOVE</a>
+                    <a href="<c:url value="/admin/removeflight/${flight.id}"/>" class="btn btn-danger rounded-0 text-light m-1">REMOVE</a>
                 </label>
-                <a href="<c:url value="/user/flightdetails/${flight.id}"/>" class="btn btn-info rounded-0 text-light m-1">DETAILS</a>
             </td>
         </tr>
     </c:forEach>

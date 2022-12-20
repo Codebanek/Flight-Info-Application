@@ -10,4 +10,5 @@ import java.util.Optional;
 @Repository
 public interface AirportRepository extends JpaRepository<Airport, Long> {
     Airport findAirportByIcaoCode(String code);
+
 }

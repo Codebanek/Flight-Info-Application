@@ -1,9 +1,7 @@
 package pl.korbanek.flightinfo.entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = FlightDetails.TABLE_NAME)
@@ -15,15 +13,22 @@ public class FlightDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false, length = 51)
     private String type;
-    private double speed;
+
+    private int speed;
+
+    @Column(nullable = false, length = 51)
     private String departure_code;
+
+    @Column(nullable = false, length = 51)
     private String arrival_code;
+
     private double distance;
+
     private double flight_time;
 
-
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
